@@ -1,0 +1,60 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.menu {
+    width: auto;
+    height: 91px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu > * {
+    height: 20%;
+    text-align: center;
+    margin: auto;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.menu .logo {
+    font-size: 20px;
+    color: #50873E;
+    font-weight: bold;
+}
+
+.bag {
+    height: 35%;
+    background: #50873E;
+    display: flex;
+    width: 8%;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.bag > * {
+    margin: auto;
+}
+
+a {
+    height: 100%;
+    text-decoration: none;
+    color: black;
+}
+
+.main {
+    background: blueviolet;
+    width: auto;
+    height: 668px;
+}
