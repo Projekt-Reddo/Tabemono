@@ -8,29 +8,69 @@
     <title>Tabemono</title>
 </head>
 <body>
-    <div id="wrapper">
-        <div class="menu">
+    <header>
+        <nav>
             <div class="logo">FLASH FOOD</div>
-            <div></div>
-            <div><a href="#">Find</a></div>
-            <div><a href="#">About us</a></div>
-            <div><a href="#">Plan</a></div>
-            <div><a href="#">Login</a></div>
-            <div><a href="#">Register</a></div>
-            <div class="userImage"></div>
-            <div class="bag">
+
+            <ul>    
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Plan</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <div class="userImage"></div>
+            </ul>  
+
+            <div class="cart">
                 <div>
-                    <img src="icon/bag.png">
+                    <img src="icon/cart.png">
                 </div>
                 <p>(2) items</p>
             </div>
-            </ul>
-        </div>
-        <div class="main">
-            <div class="adRight"></div>
-            <div class="content"></div>
-            <div class="deliver"></div>
-        </div>
-    </div>
+        </nav>
+    </header>
+
+    <aside class="left"></aside>
+
+    <!-- Main content (Food menu,...) -->
+    <main>
+        <section id="intro">
+            <div class="quote">
+
+            </div>
+
+            <div class="intro_background">
+
+            </div>
+        </section>
+
+        <section id="menu">
+            <div class="food">
+                <div class="food_image">
+                    <img src="img/#" alt="">
+                </div>
+                <div class="food_content">
+                    <div class="food_name"></div>
+                    <div class="food_loved"></div>
+                    <div class="food_rating">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="food_review"></div>
+                    <div class="food_tags"></div>
+                    <div class="food_time"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside class="right"></aside>
+    
+    <!-- Developer infomations, References -->
+    <footer>
+    </footer>
 </body>
 </html>
