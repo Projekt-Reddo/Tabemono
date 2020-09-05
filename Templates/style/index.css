@@ -1,12 +1,16 @@
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     display: grid;
-    width: vw;
+    position: relative;
 }
 
 header {
@@ -15,6 +19,7 @@ header {
     grid-template-rows: auto auto;
     background-color: white;
     width: 100%;
+    border-bottom: 1px solid gray;
 }
 
 nav {
@@ -22,17 +27,18 @@ nav {
     display: flex;
     justify-content: center;
     text-align: center;
+    align-items: center;
 }
 
 nav > * {
     height: 20%;
     text-align: center;
     margin: auto;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: bold;
 }
 
-nav .logo {
+nav h1 {
     font-size: 20px;
     color: #50873E;
     font-weight: bold;
@@ -69,17 +75,20 @@ li>a {
 }
 
 main {
-    background: blueviolet;
-    height: 100vh;
-    grid-column: 3/10;
+    background: white;
+    height: 200vh;
+    grid-column: 4/9;
+    margin-top: 20vh;
 }
 
 .left {
-    grid-column: 1/3;
+    grid-column: 1/4;
+    background: blueviolet;
 }
 
 .right {
-    grid-column: 10/12;
+    grid-column: 9/12;
+    background: cyan;
 }
 
 footer {
@@ -90,4 +99,103 @@ footer {
 
 .active {
     background-color: #a7ff83;
+}
+
+.banner_container {
+    margin-top: 2%;
+}
+
+.quote {
+    font-family: 'Grandstander', cursive, Nabila, Lobster;
+    font-size: 25px;
+    text-align: center;
+    color: #2E4765;
+    margin: auto;
+}
+
+.sign {
+    text-align: right;
+    color: #5C9C47;
+    margin-right: 2%;
+}
+
+.banner {
+    margin-top: 2%;
+    height: 55vh;
+    background-image: url("../images/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3% 0 0 3%;
+}
+
+.banner>p {
+    height: auto;
+    color: white;
+    padding: 5% 0 0 7%;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 35px;
+
+}
+
+.mobile_app {
+    display: flex;
+    align-items: center;
+    margin: 3% 0 0 7%;
+}
+
+.app_items {
+    margin-right: 2%;
+}
+
+.search_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1% 0 0 2%;
+    height: 10vh;
+    width: 96%;
+    background-color: white;
+}
+
+h3 {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #50873E;
+    font-weight: bold;
+}
+
+.search_container {
+    display: flex;
+    align-items: center;
+}
+
+.search_bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F4F9FF;
+    height: 6vh;
+    width: 24vw;
+    border-radius: 6vh;
+    margin-right: 6%;
+    position: relative;
+}
+
+.search_bar input[type="text"] {
+    margin: 0 0 0 5%;
+    padding: 0;
+    border: none;
+    height: 100%;
+    width: 80%;
+    background: transparent;
+}
+
+.search_bar input[type="image"] {
+    margin-right: 4%;
+}
+
+.filter {
+    background-color: #50873E;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
 }

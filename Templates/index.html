@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/index.css">
     <title>Tabemono</title>
 </head>
 <body>
+    <!-- Header and Navigation Bar -->
     <header>
         <nav>
-            <div class="logo">FLASH FOOD</div>
+            <h1>FLASH FOOD</h1>
 
             <ul>    
                 <li><a href="index.html" class="active">Home</a></li>
@@ -23,31 +26,59 @@
 
             <div class="cart">
                 <div>
-                    <img src="icon/cart.png">
+                    <img src="icons/cart.png">
                 </div>
                 <p>(2) items</p>
             </div>
         </nav>
     </header>
 
+    <!-- Left aside for ads -->
     <aside class="left"></aside>
 
     <!-- Main content (Food menu,...) -->
     <main>
-        <section id="intro">
+        <!-- Intro (Quote and Mobile Apps) -->
+        <section class="banner_container">
             <div class="quote">
-
+                <p>"People who love to eat are always Best People"</p>
+                <p class="sign">JULIA CHILD</p>
             </div>
 
-            <div class="intro_background">
+            <div class="banner">
+                <p>Find Healthy And<br>Favorite Food<br>Near You</p>
+            
+                <div class="mobile_app">
+                    <a href="https://apps.apple.com/us/app/id1464872022?mt=8" class="app_items">
+                        <img src="icons/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" height="50">
+                    </a>
 
+                    <a href="https://play.google.com/store/apps/details?id=com.YoStarEN.Arknights" class="app_items">
+                        <img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png" height="72">
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section id="menu">
-            <div class="food">
+        <!-- Main foods menu -->
+        <section class="our_meals">
+            <div class="search_title">
+                <h3>OUR MEALS</h3>
+                
+                <div class="search_container">
+                    <div class="search_bar">
+                        <input type="text" placeholder=" Search by name" name="search">
+                        <input type="image" src="../icons/search.png" alt="Submit" height="60%">
+                    </div>
+                    <button class="filter">
+                        <img src="icons/filter.png">
+                    </button>
+                </div>
+            </div>
+            
+            <div class="foods">
                 <div class="food_image">
-                    <img src="img/#" alt="">
+                    <img src="#" alt="">
                 </div>
                 <div class="food_content">
                     <div class="food_name"></div>
@@ -65,8 +96,12 @@
                 </div>
             </div>
         </section>
+    
+        <section class="popular_meals"></section>
     </main>
 
+
+    <!-- Right aside for shipping status -->
     <aside class="right"></aside>
     
     <!-- Developer infomations, References -->
