@@ -22,7 +22,11 @@
                 <li><a href="#">Plan</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="register.html">Register</a></li>
-                <div class="userImage"></div>
+                <div class="userImage">
+                    <div class="border">
+                        <img src="icons/user.png">
+                    </div>
+                </div>
             </ul>  
             <!-- User imange -->
             <div class="login-infor"></div>
@@ -32,6 +36,34 @@
                 <p>Cart (2)</p>
             </div>
         </nav>
+        <div class="order">
+            <h2>My Order</h2>
+            <div class="detail">
+                <h5 class="address">20 Millennium Road</h5>
+                <h5 class="waiting-time">30 min</h5>
+            </div>
+            <div class="disk">
+                <div class="food">
+                    <div class="img-border">
+                        <img class="food-img" src="images/Pakistani Chicken Platter.png">
+                    </div>
+                    <h5 class="food-name">Pakistani Chicken Platter</h5>
+                    <h5 class="price">$21.40</h5>
+                </div>
+                <div class="food">
+                    <div class="img-border">
+                        <img class="food-img" src="icons/delivery.png">
+                    </div>
+                    <h5 class="food-name">Delivery</h5>
+                    <h5 class="price">$0.00</h5>
+                </div>
+            </div>
+            <div class="total">
+                <h5 class="total-detail">Total:</h5>
+                <h5 class="total-price">$21.40</h5>
+            </div>
+            <button class="checkout">CHECKOUT</button>
+        </div>
     </header>
 
     <!-- Left aside for ads -->
@@ -103,7 +135,12 @@
 
 
     <!-- Right aside for shipping status -->
-    <aside class="right"></aside>
+    <aside class="right">
+        <div class="delivery">
+            <h4>Your Meal Has Been Shipped</h4>
+            <img class="ship_icon" src="icons/ship.png">
+            <h1 class="time"><time datetime="00:15:00+07:00">15:00</time></h1>
+        </div>
     
     <!-- Developer infomations, References -->
     <footer>
