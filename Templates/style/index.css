@@ -105,7 +105,7 @@ nav ul {
     justify-content: space-around;
 }
 
-li {
+nav ul li {
     width: 10%;
     padding-top: 1.2rem;
 }
@@ -364,18 +364,56 @@ h3 {
     margin-right: 4%;
 }
 
-.tags {
+.filter {
     display: flex;
-    height: 10%;
-    width: 96%;
-    margin-top: 2%;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+    border: none;
+    background: #5C9C47; 
 }
 
-.tags ul {
+.filter img {
+    width: 50%;
+}
+
+.food_clasify {
+    display: flex;
+    margin-top: 1%;
+    margin-left: 2%;
+    height: 15%;
+    width: 96%;
     list-style-type: none;
+}
+
+.food_clasify li {
+    margin-right: 2%;
     height: 100%;
-    border: none;
-    border-radius: 50%;
+    width: 17%;
+}
+
+.food_clasify li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+    background: #F4F9FF;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.food_clasify li a img {
+    height: 70%;
+    margin-right: 4%;
+}
+
+.food_clasify li a.classify_active {
+    background: #5C9C47;
 }
 
 /* 5. right */
