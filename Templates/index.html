@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -11,11 +11,14 @@
     <title>Tabemono</title>
 </head>
 <body>
+
     <!-- Header and Navigation Bar -->
     <header>
         <nav>
+
             <!-- Logo -->
             <h1>FLASH FOOD</h1>
+
             <!-- Menu -->
             <ul>    
                 <li class="active"><a href="index.html">Home</a></li>
@@ -23,45 +26,60 @@
                 <li><a href="#">Plan</a></li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="register.html">Register</a></li>
-                <div class="userImage">
-                    <div class="border">
-                        <img src="icons/user.png">
-                    </div>
-                </div>
             </ul>  
+
             <!-- User imange -->
-            <div class="login-infor"></div>
+            <button class="userImage">
+                <div class="border">
+                    <img src="icons/user.png">
+                </div>
+            </button>
+
             <!-- Cart -->
-            <div class="cart">
+            <button class="cart">
                 <img src="icons/cart.png">
                 <p>Cart (2)</p>
-            </div>
+            </button>
         </nav>
-        <div class="order">
-            <h2>My Order</h2>
+
+        <!-- Order information -->
+        <div class="order, invisible">
+            <div class="OrderHeading">
+                <h2>My Order</h2>
+            </div>
             <div class="detail">
-                <h5 class="address">20 Millennium Road</h5>
-                <h5 class="waiting-time">30 min</h5>
+                <div class="infor">
+                    <p class="address">20 Millennium Road</p>
+                    <p class="waiting-time">30 min</p>
+                </div>
+                <div class="edit-infor">
+                    <p>EDIT</p>
+                </div>
             </div>
             <div class="disk">
                 <div class="food">
                     <div class="img-border">
                         <img class="food-img" src="images/Pakistani Chicken Platter.png">
                     </div>
-                    <h5 class="food-name">Pakistani Chicken Platter</h5>
-                    <h5 class="price">$21.40</h5>
+                    <div class="food-infor">
+                        <p class="food-name">Pakistani Chicken Platter</p>
+                        <p class="price">$21.40</p>
+                    </div>
+                    
                 </div>
                 <div class="food">
                     <div class="img-border">
                         <img class="food-img" src="icons/delivery.png">
                     </div>
-                    <h5 class="food-name">Delivery</h5>
-                    <h5 class="price">$0.00</h5>
+                    <div class="food-infor">
+                        <p class="food-name">Delivery</p>
+                        <p class="price">$0.00</p>
+                    </div>
                 </div>
             </div>
             <div class="total">
-                <h5 class="total-detail">Total:</h5>
-                <h5 class="total-price">$21.40</h5>
+                <p class="total-detail">Total:</p>
+                <p class="total-price">$21.40</p>
             </div>
             <button class="checkout">CHECKOUT</button>
         </div>
@@ -178,12 +196,12 @@
     <!-- Right aside for shipping status -->
     <aside class="right">
         <div class="delivery">
-            <h4>Your Meal Has Been Shipped</h4>
+            <p>Your Meal Has Been Shipped</p>
             <img class="ship_icon" src="icons/ship.png">
-            <h1 class="time"><time datetime="00:15:00+07:00">15:00</time></h1>
+            <p class="time"><time datetime="00:15:00+07:00">15:00</time></p>
         </div>
     
-    <!-- Developer infomations, References -->
+    <!-- Developer information, References -->
     <footer>
     </footer>
 </body>
