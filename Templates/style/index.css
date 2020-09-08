@@ -161,7 +161,7 @@ nav ul li {
 /* Order */
 
 .order {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 25vw;
     background: white;
@@ -175,13 +175,14 @@ nav ul li {
     grid-row-gap: 3%;
 }
 
-.order .invisible {
+.show {
     display: none;
 }
 
 .order .OrderHeading {
     width: 100%;
     height: fit-content;
+    padding-top: 5%
 }
 
 .order .detail {
