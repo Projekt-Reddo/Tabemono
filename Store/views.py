@@ -64,9 +64,11 @@ def Register(request):
     else:
         return render(request, 'register.html')
 
+def Index(request):
+    return render(request, 'index.html')
 def Food(request):
-    pass
+    return render(request, 'foodpage.html')
 def Cart(request):
     pass
 def Search(request):
-    pass
+    return render(request, 'search.html')
