@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 
@@ -78,11 +79,10 @@ WSGI_APPLICATION = 'Ecommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'PVP',
+        'NAME': 'zerodawn',
         'USER': 'postgres',
-        'PASSWORD':'100206',
-        'HOST': 'localhost',
-
+        'PASSWORD': '1234',
+        'HOST': 'localhost'
     }
 }
 

@@ -4,7 +4,7 @@ from django.contrib.auth.models import User, auth
 
 # Create your views here.
 
-# # Login 
+# Login 
 # def Login(request):
 #     if request.method == 'POST':
 #         username = request.POST['username']
@@ -64,13 +64,12 @@ from django.contrib.auth.models import User, auth
 #     else:
 #         return render(request, 'register.html')
 
+def Index(request):
+    return render(request, 'index.html')
+    
 # def Food(request):
-#     pass
+#     return render(request, 'foodpage.html')
 # def Cart(request):
 #     pass
 # def Search(request):
-#     pass
-
-def index(requets):
-    
-    return render(requets, 'index.html')
+#     return render(request, 'search.html')

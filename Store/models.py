@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 # User
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    user_code = models.CharField(primary_key=True, unique=True)
+    user_code = models.CharField(primary_key=True, unique=True, max_length=100)
     username = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
     password = models.TextField()
@@ -35,15 +35,15 @@ class Order(models.Model):
 
 # Food is added to cart
 class OrderFood(models.Model):
-    food_id = models.ForeignKey(Food, on_delete=models.SET_NULL)
-    order_id = models.ForeignKey(Order, on_delete=models.SET_NULL)
+    food_id = models.ForeignKey(Food, on_delete=models.SET_NULL, null=True)
+    order_id = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
     quantity = models.IntegerField(default=0)
     date_add = models.DateTimeField(auto_now_add=True)
 
 # Ship
 class Shipping(models.Model):
-    food = models.ForeignKey(Food, on_delete=models.SET_NULL)
-    order = models.ForeignKey(Order, on_delete=models.SET_NULL)
+    food = models.ForeignKey(Food, on_delete=models.SET_NULL, null=True)
+    order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
     address = models.CharField(max_length=100)
     zip_code = models.CharField(max_length=100)
     date_add = models.DateTimeField(auto_now_add=True)
