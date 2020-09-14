@@ -3,9 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style/register.css">
     <title>Register</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+
+            <!-- Logo -->
+            <h1>FLASH FOOD</h1>
+
+            <!-- Menu -->
+            <ul>    
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#footer">About us</a></li>
+                <li><a href="#">Plan</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li class="active"><a href="register.html">Register</a></li>
+            </ul>  
+
+            <!-- User imange -->
+            <button class="userImage">
+                <div class="border">
+                    <img src="icons/user.png">
+                </div>
+            </button>
+
+            <!-- Cart -->
+            <button class="cart">
+                <img src="icons/cart.png">
+                <p>Cart (2)</p>
+            </button>
+        </nav>
+
+        <!-- Order information -->
+        <div class="show">
+            <div class="order">
+                <div class="OrderHeading">
+                    <h2>My Order</h2>
+                </div>
+                <div class="detail">
+                    <div class="infor">
+                        <p class="address">20 Millennium Road</p>
+                        <p class="waiting-time">30 min</p>
+                    </div>
+                    <div class="edit-infor">
+                        <p>EDIT</p>
+                    </div>
+                </div>
+                <div class="disk">
+                    <div class="food">
+                        <div class="img-border">
+                            <img class="food-img" src="images/Pakistani Chicken Platter.png">
+                        </div>
+                        <div class="food-infor">
+                            <p class="food-name">Pakistani Chicken Platter</p>
+                            <p class="price">$21.40</p>
+                        </div>
+            
+                    </div>
+                    <div class="food">
+                        <div class="img-border">
+                            <img class="food-img" src="icons/delivery.png">
+                        </div>
+                        <div class="food-infor">
+                            <p class="food-name">Delivery</p>
+                            <p class="price">$0.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="total">
+                    <p class="total-detail">Total:</p>
+                    <p class="total-price">$21.40</p>
+                </div>
+                <button class="checkout">CHECKOUT</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Register form -->
+    <section class="register">
+        <img src="images/chicken.png">
+        
+        <form>
+            Username: <br>
+            <input type="text" name="username" required><br>
+            Email: <br>
+            <input type="email" name="email" required><br>
+            Password: <br>
+            <input type="password" name="password" requied><br>
+            Confirm Password: <br>
+            <input type="password" name="password_confirm" requied><br>
+            <div class="terms">
+                <input type="checkbox" id="terms" name="terms_confirm" required> I agree to the terms of services<br>
+            </div>
+            <input type="submit" id="submit" value="SIGN UP FOR FREE">
+        </form>
+    </section>
+
+    <footer id="footer">
+    </footer>
 </body>
 </html>
