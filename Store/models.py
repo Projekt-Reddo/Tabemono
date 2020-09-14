@@ -6,10 +6,10 @@ from django.contrib.auth.models import User
 # User
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    user_code = models.CharField(primary_key=True, unique=True, max_length=100)
+    
     username = models.CharField(max_length=100)
     email = models.CharField(max_length=100)
-    phoneNum = models.CharField(max_length=15)
+    
     password = models.TextField()
     gender = models.CharField(max_length=10)
     dateOfBirth = models.DateTimeField()

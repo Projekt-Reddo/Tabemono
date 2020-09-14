@@ -1,13 +1,14 @@
+{%load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style/register.css">
+    <link href='{% static "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" %}' rel="stylesheet">
+    <link href='{%static "https://fonts.googleapis.com/css2?family=Grandstander:wght@500&display=swap" %}' rel="stylesheet">
+    <link href='{%static "https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" %}' rel="stylesheet">
+    <link rel="stylesheet" href='{%static "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %}'>
+    <link rel="stylesheet" href='{%static "style/register.css" %}'>
     <title>Register</title>
 </head>
 <body>
@@ -19,23 +20,23 @@
 
             <!-- Menu -->
             <ul>    
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#footer">About us</a></li>
                 <li><a href="#">Plan</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li class="active"><a href="register.html">Register</a></li>
+                <li><a href="/login">Login</a></li>
+                <li class="active"><a href="/register">Register</a></li>
             </ul>  
 
             <!-- User imange -->
             <button class="userImage">
                 <div class="border">
-                    <img src="icons/user.png">
+                    <img src='{%static "icons/user.png" %}'>
                 </div>
             </button>
 
             <!-- Cart -->
             <button class="cart">
-                <img src="icons/cart.png">
+                <img src='{%static "icons/cart.png" %}'>
                 <p>Cart (2)</p>
             </button>
         </nav>
@@ -58,7 +59,7 @@
                 <div class="disk">
                     <div class="food">
                         <div class="img-border">
-                            <img class="food-img" src="images/Pakistani Chicken Platter.png">
+                            <img class="food-img" src='{%static "images/Pakistani Chicken Platter.png" %}'>
                         </div>
                         <div class="food-infor">
                             <p class="food-name">Pakistani Chicken Platter</p>
@@ -68,7 +69,7 @@
                     </div>
                     <div class="food">
                         <div class="img-border">
-                            <img class="food-img" src="icons/delivery.png">
+                            <img class="food-img" src='{%static "icons/delivery.png" %}'>
                         </div>
                         <div class="food-infor">
                             <p class="food-name">Delivery</p>
@@ -87,9 +88,12 @@
 
     <!-- Register form -->
     <section class="register">
-        <img src="images/chicken.png">
-        
-        <form>
+        <img src='{%static "images/chicken.png" %}'>
+        {% block content %}
+        <form action="register" method='post'>
+
+            {% csrf_token %}
+
             Username: <br>
             <input type="text" name="username" required><br>
             Email: <br>
@@ -103,6 +107,7 @@
             </div>
             <input type="submit" id="submit" value="SIGN UP FOR FREE">
         </form>
+    {% endblock %}
     </section>
 
     <footer id="footer">
