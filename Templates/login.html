@@ -93,9 +93,9 @@
         <form action="login" method="post">
             {% csrf_token %}
             Username: <br>
-            <input type="text" name="username" required><br>
+            <input type="text" name="username" required pattern="[a-zA-Z0-9-_.@]{6,}" title="Invalid username"><br>
             Password: <br>
-            <input type="password" name="password" requied><br>
+            <input type="password" name="password" requied pattern="[a-zA-Z0-9-_.@]{8,}" title="Invalid password"><br>
             <input type="submit" id="submit" value="SIGN IN">
         </form>
     </section>
