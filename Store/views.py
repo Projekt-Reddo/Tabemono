@@ -29,19 +29,12 @@ def Logout(request):
 # Register 
 def Register(request):
     if request.method == 'POST':
-        # first_name = request.POST['first_name']
-        # last_name = request.POST['last_name']
         username = request.POST['username']
         email = request.POST['email']
-        # phoneNum = request.POST['phoneNum']
-        # gender = request.POST['gender']
-        # dateOfBirth = request.POST['dateOfBirth']
         password = request.POST['password']
         password_confirm = request.POST['password_confirm']
-        # is_shipper = request.POST['is_shipper']
 
         if password == password_confirm:
-
             if User.objects.filter(username=username).exists():
                 messages.info(request, "This username is used")
                 return redirect('Register')
@@ -51,10 +44,7 @@ def Register(request):
                 return redirect('Register')
 
             else:
-                user = User.objects.create_user(username=username, password=password, 
-                email=email, #phoneNum= phoneNum, first_name=first_name, last_name=last_name,
-                #dateOfBirth= dateOfBirth, gender= gender, is_shipper= is_shipper
-                )
+                user = User.objects.create_user(username=username, password=password, email=email)
                 user.save()  
                 print("User created")
                 return redirect('Login')
@@ -63,6 +53,11 @@ def Register(request):
             return redirect('Register')
     else:
          return render(request, 'register.html')
+
+
+
+
+
 
 def Index(request):
     return render(request, 'index.html')

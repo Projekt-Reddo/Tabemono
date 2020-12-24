@@ -98,7 +98,7 @@
             Username: <br>
             <input type="text" name="username" required pattern="[a-zA-Z0-9-_.@]{6,}" title="Username must have at least 6 characters and can only contains letters, numbers and special character: _ - . @"><br>
             Email: <br>
-            <input type="email" name="email" required pattern="[a-zA-Z0-9-_.@]{6,}" title="Invalid email"><br>
+            <input type="email" name="email" required pattern="[a-zA-Z0-9._-]{6,}@[a-zA-Z0-9._-]{6,}.[a-zA-Z]{2,4}" title="Invalid email"><br>
             Password: <br>
             <input type="password" id="password" name="password" requied pattern="[a-zA-Z0-9-_.@]{8,}" title="Password must have at least 8 characters and can only contains letters, numbers and special character: _ - . @"><br>
             Confirm Password: <br>
