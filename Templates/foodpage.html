@@ -1,11 +1,224 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='{% static "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" %}' rel="stylesheet">
+    <link href='{% static "https://fonts.googleapis.com/css2?family=Grandstander:wght@500&display=swap" %}' rel="stylesheet">
+    <link href='{% static "https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" %}' rel="stylesheet">
+    <link rel='{% static "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" %}'>
+    <link rel='{% static "stylesheet" href="style/foodpage.css" %}'>
+    <title>Product Page</title>
 </head>
 <body>
-    
+    <!-- Header and Navigation Bar -->
+    <header>
+        <nav>
+
+            <!-- Logo -->
+            <h1>FLASH FOOD</h1>
+
+            <!-- Menu -->
+            <ul>    
+                <li><a href="/index">Home</a></li>
+                <li><a href="#footer">About us</a></li>
+                <li><a href="#">Plan</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/register">Register</a></li>
+            </ul>  
+
+            <!-- User imange -->
+            <button class="userImage">
+                <div class="border">
+                    <img src='{%static "icons/user.png" %}'>
+                </div>
+            </button>
+
+            <!-- Cart -->
+            <button class="cart">
+                <div class="border">
+                    <img src='{%static "icons/cart.png" %}'>
+                    <p>Cart (2)</p>
+                </div>
+            </button>
+        </nav>
+
+        <!-- Order information -->
+        <div class="show">
+            <div class="order">
+                <div class="OrderHeading">
+                    <h2>My Order</h2>
+                </div>
+                <div class="detail">
+                    <div class="infor">
+                        <p class="address">20 Millennium Road</p>
+                        <p class="waiting-time">30 min</p>
+                    </div>
+                    <div class="edit-infor">
+                        <p>EDIT</p>
+                    </div>
+                </div>
+                <div class="disk">
+                    <div class="food">
+                        <div class="img-border">
+                            <img class="food-img" src='{%static "images/Pakistani Chicken Platter.png" %}'>
+                        </div>
+                        <div class="food-infor">
+                            <p class="food-name">Pakistani Chicken Platter</p>
+                            <p class="price">$21.40</p>
+                        </div>
+            
+                    </div>
+                    <div class="food">
+                        <div class="img-border">
+                            <img class="food-img" src='{%static "icons/delivery.png" %}'>
+                        </div>
+                        <div class="food-infor">
+                            <p class="food-name">Delivery</p>
+                            <p class="price">$0.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="total">
+                    <p class="total-detail">Total:</p>
+                    <p class="total-price">$21.40</p>
+                </div>
+                <button class="checkout">CHECKOUT</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="product">
+            <div class="product_info">
+                <h1>Spice your <b>Moods</b></h1>
+                <h3>Spicy vegetable soup</h3>
+                <p>Molestie ac feugiat sed lectus. Cursus sit amet dictum sit amet. 
+                    Egestas diam in arcu cursus euismod quis viverra. Eget gravida 
+                    cum sociis natoque penatibus et magnis.</p>
+                <div class="buttons">
+                    <button class="left_button">View Menu</button>
+                    <button class="right_button">Add to Cart</button>
+                </div>
+                <div class="product_time">
+                    <h4>Breakfast</h4><br>
+                    <p>9.00 a.m. - 11.00 a.m.</p>
+                    <i class="fa fa-long-arrow-right fa-3x"></i>
+                </div>
+                <ul class="food_clasify">
+                    <li>
+                        <a href="search.html">
+                            <img src='{%static "icons/breakfast.png"%}'>
+                            <span>Amiya (23)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <img src='{%static "icons/lunch.png"%}'>
+                            <span>Ceobe (41)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="search.html">
+                            <img src='{%static "icons/drink.png"%}'>
+                            <span>Skadi (53)</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="product_img">
+                <img src='{%static "images/soup.png"%}'>
+            </div>
+        </section>
+
+        <section class="popular_meals">
+            <div class="popular_title">
+                <h3>POPULAR MEALS</h3>
+                <div class="line">&nbsp;</div>
+            </div>
+            <ul class="foods popular">
+                <li class="food_container">
+                    <a href="foodpage.html">
+                        <img src='{%"images/Pakistani Chicken Platter.png"%}' alt="Pakistani Chicken Platter">
+                        <div class="food_content">
+                            <div class="food_name">Pakistani Chicken Platter</div>
+                            <span class="fa fa-heart food_love loved"></span>
+                            <div class="food_rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="food_review">32 Reviews</div>
+                            <ul class="food_tags">
+                                <li class="food_tag"><span>Indian</span></li>
+                                <li class="food_tag"><span>Pakistani</span></li>
+                            </ul>
+                            <div class="food_time">
+                                <i class="fa fa-clock-o" style="font-size: 1rem"></i>
+                                <span>&nbsp;20-30</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="food_container">
+                    <a href="foodpage.html">
+                        <img src='{%static "images/Risotto.png"%}' alt="Risotto">
+                        <div class="food_content">
+                            <div class="food_name">Risotto</div>
+                            <span class="fa fa-heart food_love"></span>
+                            <div class="food_rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                            <div class="food_review">20 Reviews</div>
+                            <ul class="food_tags">
+                                <li class="food_tag"><span>Italian</span></li>
+                                <li class="food_tag"><span>European</span></li>
+                            </ul>
+                            <div class="food_time">
+                                <i class="fa fa-clock-o" style="font-size: 1rem"></i>
+                                <span>&nbsp;10-20</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="food_container">
+                    <a href="foodpage.html">
+                        <img src='{%static "images/Maslenitca.png"%}' alt="Maslenitca">
+                        <div class="food_content">
+                            <div class="food_name">Maslenitca</div>
+                            <span class="fa fa-heart food_love loved"></span>
+                            <div class="food_rating">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                            <div class="food_review">45 Reviews</div>
+                            <ul class="food_tags">
+                                <li class="food_tag"><span>Russian</span></li>
+                            </ul>
+                            <div class="food_time">
+                                <i class="fa fa-clock-o" style="font-size: 1rem"></i>
+                                <span>&nbsp;25-35</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="footer">
+    </footer>
 </body>
 </html>

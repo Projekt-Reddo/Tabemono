@@ -64,8 +64,8 @@ a {
 body {
     font-family: 'Montserrat', sans-serif;
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
     position: relative;
+    width: 100vw;
 }
 
 /* 2. header  */
@@ -280,155 +280,109 @@ nav ul li {
     color: white;
 }
 
-/* 3. left */
-
-.left {
-    grid-column: span 1;
-    background: blueviolet;
-}
-
-/* 4. main content */
-
 main {
-    background: white;
-    height: 70rem;
-    grid-column: span 1;
-    margin-top: 10%;
+    margin-top: 4rem;
+    padding-top: 1rem;
+    height: 54rem;
+    width: 100vw;
 }
 
-.banner_container {
-    margin-top: 2%;
-    height: 40%;
+.product {
+    height: 62.5%;
+    width: 100%;
 }
 
-.quote {
-    height: 15%;
-    font-family: 'Grandstander', cursive, Nabila, Lobster;
-    font-size: 1.5625rem;
-    text-align: center;
-    color: #2E4765;
+.product_info {
+    margin: 0 3rem 0 4rem;
+    padding-top: 3rem;
+    width: 44%;
+    float: left;
 }
 
-.sign {
-    text-align: right;
-    color: #5C9C47;
-    margin-right: 2%;
+.product_info>* {
+    padding-top: 1rem;
 }
 
-.banner {
-    margin-top: 2%;
-    height: 80%;
-    background-image: url("../images/banner.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 3% 3% 3% 3%;
+.product_info h1 {
+    width: 100%;
+    padding: 0 2rem 0 1rem;
+    border-left: 4px solid #5C9C47;
+    font-size: 3rem;
 }
 
-.banner>p {
-    height: auto;
-    color: white;
-    padding: 5% 0 0 7%;
-    font-family: 'Noto Sans JP', sans-serif;
-    font-size: 2.1875rem;
-
+.product_info h3 {
+    width: 100%;
+    padding-left: 1rem;
+    border-left: 4px solid #5C9C47;
+    font-size: 1.5rem;
 }
 
-.mobile_app {
-    display: flex;
-    align-items: center;
-    margin: 3% 0 0 7%;
+.product_info p {
+    width: 100%;
+    padding-left: 1rem;
+    text-align: justify;
+    color: #9E7474;
 }
 
-.app_items {
-    margin-right: 2%;
+.product_info .buttons {
+    margin-top: 1rem;
+    width: 80%;
+    height: 2.8rem;
 }
 
-.app_store {
-    height: 3.125rem;
+.buttons>* {
+    width: 35%;
+    height: 100%;
+    margin-left: 1rem;
+    border-radius: 2.5rem;
+    border: none;
+    box-shadow: 1px 2px 2px grey;
+    font-size: 1rem;
 }
 
-.google_play {
-    height: 4.5rem;
-}
-
-.our_meals {
-    height: 30%;
-}
-
-.search_title {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1% 0 0 2%;
-    width: 96%;
-    height: 15%;
+.left_button {
     background-color: white;
+    color: #5C9C47;
 }
 
-h3 {
-    font-family: 'Noto Sans JP', sans-serif;
-    color: #50873E;
-    font-weight: bold;
+.right_button {
+    margin-left: 2rem;
+    background-color: #5C9C47;
+    color: white;
 }
 
-.search_container {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    height: 65%;
+.product_time {
+    padding-left: 1rem;
 }
 
-.search_bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #F4F9FF;
-    width: 80%;
-    border-radius: 6vh;
-    margin-right: 6%;
-    height: 100%;
+.product_time i {
+    margin-left: 3rem;
+    color: #5C9C47;
+    position: relative;
+    animation-name: moving;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
 }
 
-.search_bar input[type="text"] {
-    margin: 0 0 0 5%;
-    padding: 0;
-    border: none;
-    height: 100%;
-    width: 80%;
-    background: transparent;
-}
-
-.search_bar input[type="image"] {
-    margin-right: 4%;
-}
-
-.filter {
-    display: flex;
-    justify-content: center;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 2rem;
-    border: none;
-    background: #5C9C47; 
-}
-
-.filter img {
-    width: 50%;
+@keyframes moving {
+    0% {left: 0px;}
+    50% {left: 50px;}
+    100% {left:0px;}
 }
 
 .food_clasify {
     display: flex;
     margin-top: 1%;
     margin-left: 2%;
-    height: 10%;
-    width: 96%;
+    height: 2rem;
+    width: 80%;
     list-style-type: none;
 }
 
 .food_clasify li {
-    margin-right: 2%;
+    margin-right: 5%;
     height: 100%;
-    width: 17%;
+    width: 33%;
 }
 
 .food_clasify li a {
@@ -446,12 +400,20 @@ h3 {
 }
 
 .food_clasify li a img {
-    height: 70%;
+    height: 1rem;
     margin-right: 4%;
 }
 
-.food_clasify li a.classify_active {
-    background: #5C9C47;
+.product_img {
+    height: 33.75rem;
+    width: 33.75rem;
+    float: right;
+    padding-right: 2rem;
+}
+
+.product_img img {
+    height: 100%;
+    width: 100%;
 }
 
 .foods {
@@ -564,7 +526,9 @@ h3 {
 }
 
 .popular_meals {
-    height: 25%;
+    height: 37.5%;
+    width: 75%;
+    margin: auto;
 }
 
 .popular_title {
@@ -594,50 +558,9 @@ h3 {
     height: 80%;
 }
 
-/* 5. right */
-
-.right {
-    position: relative;
-    z-index: -1;
-}
-
-.delivery {
-    grid-column: span 1;
-    margin-top: 7rem;
-    height: 17rem;
-    width: 11rem;
-    position: fixed;
-    margin-left: 0.5rem;
-    text-align: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.delivery>*{
-    padding: 1rem 1rem 0vh 1rem;
-}
-
-.delivery .border {
-    height: 30%;
-    width: 90%;
-}
-
-.delivery .border img {
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.delivery p:nth-child(1) {
-    font-size: 1rem;
-    font-weight: 1000;
-}
-
-.delivery p:nth-child(3) {
-    font-size: 3rem;
-}
-
-/* 6. footer */
 footer {
+    margin-top: 4rem;
     height: 10rem;
-    width: 100%;
+    width: 100vw;
     background-color: yellowgreen;
 }
